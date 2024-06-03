@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 import styles from './App.module.css'
+import Post from "./components/Post/Post";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
     <div className={styles.wrapper}>
       <Sidebar/>
       <main>
-        <h1>Post</h1>
-        <h1>Post</h1>
+        <Post />
+        <Post />
+        <Post />
       </main>
     </div>
   </div>
