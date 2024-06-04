@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from './Post.module.css'
+import Comment  from '../Comment/Comment'
+import Avatar from '../Avatar/Avatar'
 
 export default function Post() {
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img className={styles.avatar} src="https://github.com/miguelcutri.png" />
+          <Avatar src="https://github.com/diego3g.png"/>
           <div className={styles.authorInfo}>
             <strong>Miguel Cutri</strong>
             <span>Software Developer</span>
@@ -32,6 +34,12 @@ export default function Post() {
         <button type='submit' >Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   )
 }
