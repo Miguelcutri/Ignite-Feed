@@ -15,7 +15,6 @@
   color: var(--gray-400);
 }
 
-/*Hermes */
 .post + .post{
   margin-top: 2rem;
 }
@@ -89,10 +88,12 @@
 }
 
 .commentForm:focus-within footer{ 
-  /*se houver um foco em qualquer input ou textarea ou qualquer elemento dentro do comment form,
-  //aplicar o estilo abaixo -  Hermes */
   visibility: visible;
   max-height: none;
+}
+
+.commentForm button:focus{
+  outline: none;
 }
 .commentForm button[type=submit]{
   padding: 1rem 1.5rem;
@@ -107,10 +108,21 @@
   transition: background-color 0.2s;
 }
 
-.commentForm button[type=submit]:hover{
+/* Hermes 10:30 Validando formulario - 3 */
+.commentForm button[type=submit]:not(:disabled):hover{
   background: var(--green-300);
 }
 
+.commentForm button[type=submit]:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
 .commentList{
   margin-top: 2rem;
+}
+.commentForm button[type=submit]:focus {
+  outline: none;
+  box-shadow: none;
 }
